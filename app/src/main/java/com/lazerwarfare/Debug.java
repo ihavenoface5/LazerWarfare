@@ -14,7 +14,6 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -54,9 +53,7 @@ public class Debug extends Activity implements BleManager.BleManagerListener{
     public static final int kTxMaxCharacters = 20;
 
     private ArrayList<BluetoothDeviceData> mScannedDevices;
-    public ArrayAdapter<BluetoothDeviceData> mScannedDevicesAdapter;
     private long mLastUpdateMillis;
-    private BluetoothDeviceData mSelectedDeviceData;
     private final static long kMinDelayToUpdateUI = 200;    // in milliseconds
 
     private Handler mhandler;
@@ -346,19 +343,20 @@ public class Debug extends Activity implements BleManager.BleManagerListener{
         Log.i(TAG, "Select Device Dialog");
         AlertDialog.Builder builder = new AlertDialog.Builder(Debug.this);
         if (mScannedDevices != null) {
-            //make sure no null devices exist
-            for (int i = 0; i < mScannedDevices.size(); i++)
-            {
-                if (mScannedDevices.get(i).device.getName() == null)
-                {
-                    mScannedDevices.remove(i);
-                }
-            }
             if (mScannedDevices.size() > 0) {
                 Log.i(TAG, "Devices found");
                 String[] items = new String[mScannedDevices.size()];
                 for (int i = 0; i < mScannedDevices.size(); i++) {
-                    items[i] = mScannedDevices.get(i).device.getName();
+                    String deviceName = mScannedDevices.get(i).device.getName();
+                    String deviceAddress = mScannedDevices.get(i).device.getAddress();
+                    if (deviceName != null )
+                    {
+                        items[i] = deviceName;
+                    }
+                    else
+                    {
+                        items[i] = deviceAddress;
+                    }
                 }
 
                 builder.setTitle("Connect to BLE Device")
