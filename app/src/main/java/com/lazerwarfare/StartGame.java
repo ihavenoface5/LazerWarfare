@@ -113,6 +113,7 @@ public class StartGame extends Activity {
 		if (HttpConnect.isNetworkAvailable(getApplicationContext()))
 		{
 			Player.startGame(this);
+			Toast.makeText(this, "Connection failed. Please check connection and try again.", Toast.LENGTH_LONG).show();
 		}
 		else
 		{
