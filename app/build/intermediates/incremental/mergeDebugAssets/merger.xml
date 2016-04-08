@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\Android\LazerWarfare\app\src\main\assets"><file name="fonts/PROXIMANOVA-BOLD.ttf" path="D:\Android\LazerWarfare\app\src\main\assets\fonts\PROXIMANOVA-BOLD.ttf"/><file name="fonts/PROXIMANOVA-LIGHT.ttf" path="D:\Android\LazerWarfare\app\src\main\assets\fonts\PROXIMANOVA-LIGHT.ttf"/></source></dataSet><dataSet config="debug"><source path="D:\Android\LazerWarfare\app\src\debug\assets"/></dataSet></merger>

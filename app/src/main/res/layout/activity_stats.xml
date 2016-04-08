@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/appbg"
+    tools:context=".Stats" >
+
+    <ImageView
+        android:id="@+id/gameStatsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gamestats"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/Description"
+        android:paddingTop="30sp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        />
+    
+    <TextView
+       android:id="@+id/playerText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/player"
+       android:layout_centerVertical="true"
+       android:layout_alignParentLeft="true"
+       android:textColor="@color/white" 
+       android:textSize="20sp"
+       android:visibility="gone"/>
+    
+    <TextView
+       android:id="@+id/shotsFiredText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/player"
+       android:layout_centerVertical="true"
+       android:layout_alignParentRight="true"
+       android:textColor="@color/white" 
+       android:textSize="20sp"
+       android:visibility="gone"/>
+    
+    <TextView
+       android:id="@+id/hitsText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/player"
+       android:layout_centerVertical="true"
+       android:layout_alignParentRight="true"
+       android:textColor="@color/white" 
+       android:textSize="20sp"
+       android:visibility="gone"/>
+    
+    <TextView
+       android:id="@+id/accuracyText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/player"
+       android:layout_centerVertical="true"
+       android:layout_alignParentRight="true"
+       android:textColor="@color/white" 
+       android:textSize="20sp"
+       android:visibility="gone"/>
+
+    <TextView
+       android:id="@+id/GameOver"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Return to Wi-Fi!"
+       android:layout_centerVertical="true"
+       android:layout_centerHorizontal="true"
+       android:textColor="@color/white" 
+       android:textSize="40sp"
+       />
+    
+    <TextView
+       android:id="@+id/warning"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/GameOver"
+       android:text="Or lose yon GLORY!"
+       android:layout_centerVertical="true"
+       android:layout_centerHorizontal="true"
+       android:textColor="@color/white" 
+       android:textSize="20sp"
+       />
+    
+
+   
+</RelativeLayout>

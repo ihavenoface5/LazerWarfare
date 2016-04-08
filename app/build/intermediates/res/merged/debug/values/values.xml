@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/apk/res/android">
+    <string-array name="gameTypeArray">
+        <item>Team Deathmatch</item>
+        <item>Free For All</item>
+    </string-array>
+    <string-array name="gunArray">
+        <item/>
+        <item>Gun 1</item>
+        <item>Gun 2</item>
+        <item>Gun 3</item>
+        <item>Gun 4</item>
+        <item>Gun 5</item>
+    </string-array>
+    <string-array name="scoreLimitArray">
+        <item>No Limit</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+    </string-array>
+    <string-array name="server_list">
+        <item>lasertag.byu.edu</item>
+        <item>Server-less mode</item>
+    </string-array>
+    <string-array name="soundPacks">
+        <item>"Half Life HEV (default)"</item>
+        <item>Mario</item>
+        <item>Zelda</item>
+        <item>Doom</item>
+        <item>Cortana (Halo)</item>
+    </string-array>
+    <string-array name="teamArray">
+        <item>Empire</item>
+        <item>Alliance</item>
+    </string-array>
+    <string-array name="teams">
+        <item>Select a team</item>
+        <item>Empire</item>
+        <item>Alliance</item>
+    </string-array>
+    <string-array name="timeLimitArray">
+        <item>No Limit</item>
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="wifiReceiveWindow">
+        <item>"5"</item>
+        <item>"10"</item>
+        <item>"15"</item>
+        <item>"20"</item>
+    </string-array>
+    <color name="blue">#003D99</color>
+    <color name="red">#FF4545</color>
+    <color name="white">#FFFFFF</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="Description">value</string>
+    <string name="accuracy">Accuracy</string>
+    <string name="action_settings">Settings</string>
+    <string name="ammo">15</string>
+    <string name="app_name">Lazer Warfare</string>
+    <string name="apply">Apply</string>
+    <string name="back">Back</string>
+    <string name="bluetoothDebug">Bluetooth Debugger</string>
+    <string name="bluetooth_client">Client</string>
+    <string name="bluetooth_message">Enter something!</string>
+    <string name="bluetooth_send">Send</string>
+    <string name="bluetooth_server">Server</string>
+    <string name="deleteProfile">Delete this profile</string>
+    <string name="enterName">Enter your name!</string>
+    <string ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content" name="enterServerText">Server (ip/name only)</string>
+    <string name="gameSettings">Game Settings:</string>
+    <string name="gameType">Game Mode:</string>
+    <string name="gametype">Deathmatch</string>
+    <string name="health">100</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hits">Hits</string>
+    <string name="joinText">Find a game</string>
+    <string name="offlineText">Play offline</string>
+    <string name="player">Player</string>
+    <string name="respawnText">Recharging</string>
+    <string name="score">SCORE</string>
+    <string name="scoreLimit">Score Limit:</string>
+    <string name="scoreLimitHelp">Enter a score limit</string>
+    <string name="selectGun">Select a weapon</string>
+    <string name="selectGunText">Weapon:</string>
+    <string name="selectTeam">Select Team:</string>
+    <string name="settingsText">Settings</string>
+    <string name="settingsTitle">Settings</string>
+    <string name="shotsFired">Shots fired</string>
+    <string name="soundPackText">Sound Pack:</string>
+    <string name="startScore">0</string>
+    <string name="startText">Start game with server</string>
+    <string name="team1Name">Empire</string>
+    <string name="team1Short">Alln</string>
+    <string name="team2Name">Alliance</string>
+    <string name="team2Short">Emp</string>
+    <string name="teamText">Team:</string>
+    <string name="time">30:00</string>
+    <string name="timeLeft">TIME LEFT</string>
+    <string name="timeLeftText">Time Limit:</string>
+    <string name="timeLimit">Time Limit:</string>
+    <string name="title_activity_bluetooth">Bluetooth</string>
+    <string name="title_activity_debug">Debug</string>
+    <string name="title_activity_game">Game</string>
+    <string name="title_activity_game_stats">GameStats</string>
+    <string name="title_activity_google_map_test">GoogleMapTest</string>
+    <string name="title_activity_intro_video">IntroVideo</string>
+    <string name="title_activity_join_game">Activity_join_game</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_messages">Messages</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_start_game">StartGame</string>
+    <string name="title_activity_stats">Stats</string>
+    <string name="username">Username:</string>
+    <string name="waiting">Waiting for players 60</string>
+    <string name="waittime">60</string>
+    <string name="wifiText">HTTP Receive Window:</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+</resources>

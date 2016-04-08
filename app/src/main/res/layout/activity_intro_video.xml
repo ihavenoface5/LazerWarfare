@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:configChanges="keyboardHidden|orientation" >
+
+    <VideoView android:id="@+id/videoPlayer"
+             android:layout_width="fill_parent"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:layout_alignParentBottom="true"
+             android:layout_height="fill_parent">
+    </VideoView>
+
+    <ProgressBar
+        android:id="@+id/progressSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="250sp" />
+
+</RelativeLayout>

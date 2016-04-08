@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\raw\\oneminutewarning.wav",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\raw\\oneminutewarning.wav"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\raw\\lwintro.mp4",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\raw\\lwintro.mp4"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\raw\\healthcritical.wav",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\raw\\healthcritical.wav"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\raw\\fight.wav",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\raw\\fight.wav"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\raw\\bloodloss.wav",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\raw\\bloodloss.wav"
+    }
+]

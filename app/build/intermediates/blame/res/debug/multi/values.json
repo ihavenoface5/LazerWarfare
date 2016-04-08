@@ -1,0 +1,1530 @@
+[
+    {
+        "outputFile": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 110,
+                    "endLine": 5,
+                    "endColumn": 19,
+                    "endOffset": 236
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 1145,
+                        "endLine": 32,
+                        "endColumn": 19,
+                        "endOffset": 1271
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 241,
+                    "endLine": 13,
+                    "endColumn": 19,
+                    "endOffset": 442
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 765,
+                        "endLine": 23,
+                        "endColumn": 19,
+                        "endOffset": 972
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 447,
+                    "endLine": 19,
+                    "endColumn": 19,
+                    "endOffset": 612
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 4,
+                        "startOffset": 1676,
+                        "endLine": 47,
+                        "endColumn": 19,
+                        "endOffset": 1841
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 617,
+                    "endLine": 23,
+                    "endColumn": 19,
+                    "endOffset": 746
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 73,
+                        "startColumn": 4,
+                        "startOffset": 2583,
+                        "endLine": 76,
+                        "endColumn": 19,
+                        "endOffset": 2712
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 751,
+                    "endLine": 30,
+                    "endColumn": 19,
+                    "endOffset": 966
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 121,
+                        "startColumn": 4,
+                        "startOffset": 4674,
+                        "endLine": 127,
+                        "endColumn": 19,
+                        "endOffset": 4899
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 971,
+                    "endLine": 34,
+                    "endColumn": 19,
+                    "endOffset": 1080
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 55,
+                        "startColumn": 4,
+                        "startOffset": 2032,
+                        "endLine": 58,
+                        "endColumn": 19,
+                        "endOffset": 2141
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 1085,
+                    "endLine": 39,
+                    "endColumn": 19,
+                    "endOffset": 1225
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 85,
+                        "startColumn": 4,
+                        "startOffset": 2962,
+                        "endLine": 89,
+                        "endColumn": 19,
+                        "endOffset": 3102
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 1230,
+                    "endLine": 46,
+                    "endColumn": 19,
+                    "endOffset": 1411
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 48,
+                        "startColumn": 4,
+                        "startOffset": 1846,
+                        "endLine": 54,
+                        "endColumn": 19,
+                        "endOffset": 2027
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 1416,
+                    "endLine": 52,
+                    "endColumn": 19,
+                    "endOffset": 1578
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 114,
+                        "startColumn": 4,
+                        "startOffset": 4413,
+                        "endLine": 119,
+                        "endColumn": 19,
+                        "endOffset": 4615
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 1583,
+                    "endColumn": 38,
+                    "endOffset": 1617
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 83,
+                        "startColumn": 4,
+                        "startOffset": 2922,
+                        "endColumn": 38,
+                        "endOffset": 2956
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 1622,
+                    "endColumn": 37,
+                    "endOffset": 1655
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 82,
+                        "startColumn": 4,
+                        "startOffset": 2884,
+                        "endColumn": 37,
+                        "endOffset": 2917
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 1660,
+                    "endColumn": 39,
+                    "endOffset": 1695
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 63,
+                        "startColumn": 4,
+                        "startOffset": 2237,
+                        "endColumn": 39,
+                        "endOffset": 2272
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 1700,
+                    "endColumn": 57,
+                    "endOffset": 1753
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 89,
+                        "endColumn": 57,
+                        "endOffset": 142
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 57,
+                    "startColumn": 4,
+                    "startOffset": 1758,
+                    "endColumn": 55,
+                    "endOffset": 1809
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 147,
+                        "endColumn": 55,
+                        "endOffset": 198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 1814,
+                    "endColumn": 45,
+                    "endOffset": 1855
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 272,
+                        "endColumn": 45,
+                        "endOffset": 313
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 59,
+                    "startColumn": 4,
+                    "startOffset": 1860,
+                    "endColumn": 45,
+                    "endOffset": 1901
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 95,
+                        "startColumn": 4,
+                        "startOffset": 3279,
+                        "endColumn": 45,
+                        "endOffset": 3320
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 1906,
+                    "endColumn": 52,
+                    "endOffset": 1954
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 166,
+                        "endColumn": 52,
+                        "endOffset": 214
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 61,
+                    "startColumn": 4,
+                    "startOffset": 1959,
+                    "endColumn": 35,
+                    "endOffset": 1990
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 67,
+                        "startColumn": 4,
+                        "startOffset": 2358,
+                        "endColumn": 35,
+                        "endOffset": 2389
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 62,
+                    "startColumn": 4,
+                    "startOffset": 1995,
+                    "endColumn": 50,
+                    "endOffset": 2041
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 115,
+                        "endColumn": 50,
+                        "endOffset": 161
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 63,
+                    "startColumn": 4,
+                    "startOffset": 2046,
+                    "endColumn": 39,
+                    "endOffset": 2081
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 130,
+                        "startColumn": 4,
+                        "startOffset": 5028,
+                        "endColumn": 39,
+                        "endOffset": 5063
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 64,
+                    "startColumn": 4,
+                    "startOffset": 2086,
+                    "endColumn": 37,
+                    "endOffset": 2119
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 131,
+                        "startColumn": 4,
+                        "startOffset": 5068,
+                        "endColumn": 37,
+                        "endOffset": 5101
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 65,
+                    "startColumn": 4,
+                    "startOffset": 2124,
+                    "endColumn": 61,
+                    "endOffset": 2181
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 128,
+                        "startColumn": 4,
+                        "startOffset": 4904,
+                        "endColumn": 61,
+                        "endOffset": 4961
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 66,
+                    "startColumn": 4,
+                    "startOffset": 2186,
+                    "endColumn": 51,
+                    "endOffset": 2233
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 544,
+                        "endColumn": 51,
+                        "endOffset": 591
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 67,
+                    "startColumn": 4,
+                    "startOffset": 2238,
+                    "endColumn": 62,
+                    "endOffset": 2296
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 381,
+                        "endColumn": 62,
+                        "endOffset": 439
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 68,
+                    "startColumn": 4,
+                    "startOffset": 2301,
+                    "endColumn": 47,
+                    "endOffset": 2344
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 444,
+                        "endColumn": 47,
+                        "endOffset": 487
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 69,
+                    "startColumn": 4,
+                    "startOffset": 2349,
+                    "endColumn": 51,
+                    "endOffset": 2396
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 492,
+                        "endColumn": 51,
+                        "endOffset": 539
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 70,
+                    "startColumn": 4,
+                    "startOffset": 2401,
+                    "endColumn": 61,
+                    "endOffset": 2458
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 129,
+                        "startColumn": 4,
+                        "startOffset": 4966,
+                        "endColumn": 61,
+                        "endOffset": 5023
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 71,
+                    "startColumn": 4,
+                    "startOffset": 2463,
+                    "endColumn": 54,
+                    "endOffset": 2513
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 709,
+                        "endColumn": 54,
+                        "endOffset": 759
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 72,
+                    "startColumn": 4,
+                    "startOffset": 2518,
+                    "endColumn": 152,
+                    "endOffset": 2666
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 96,
+                        "startColumn": 4,
+                        "startOffset": 3325,
+                        "endColumn": 164,
+                        "endOffset": 3485
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 73,
+                    "startColumn": 4,
+                    "startOffset": 2671,
+                    "endColumn": 55,
+                    "endOffset": 2722
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 1277,
+                        "endColumn": 55,
+                        "endOffset": 1328
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 74,
+                    "startColumn": 4,
+                    "startOffset": 2727,
+                    "endColumn": 47,
+                    "endOffset": 2770
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1096,
+                        "endColumn": 47,
+                        "endOffset": 1139
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 75,
+                    "startColumn": 4,
+                    "startOffset": 2775,
+                    "endColumn": 47,
+                    "endOffset": 2818
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 68,
+                        "startColumn": 4,
+                        "startOffset": 2394,
+                        "endColumn": 47,
+                        "endOffset": 2437
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 76,
+                    "startColumn": 4,
+                    "startOffset": 2823,
+                    "endColumn": 38,
+                    "endOffset": 2857
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 66,
+                        "startColumn": 4,
+                        "startOffset": 2319,
+                        "endColumn": 38,
+                        "endOffset": 2353
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 77,
+                    "startColumn": 4,
+                    "startOffset": 2862,
+                    "endColumn": 52,
+                    "endOffset": 2910
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 219,
+                        "endColumn": 52,
+                        "endOffset": 267
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 78,
+                    "startColumn": 4,
+                    "startOffset": 2915,
+                    "endColumn": 37,
+                    "endOffset": 2948
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 94,
+                        "startColumn": 4,
+                        "startOffset": 3241,
+                        "endColumn": 37,
+                        "endOffset": 3274
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 79,
+                    "startColumn": 4,
+                    "startOffset": 2953,
+                    "endColumn": 48,
+                    "endOffset": 2997
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 108,
+                        "startColumn": 4,
+                        "startOffset": 4091,
+                        "endColumn": 48,
+                        "endOffset": 4135
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 80,
+                    "startColumn": 4,
+                    "startOffset": 3002,
+                    "endColumn": 52,
+                    "endOffset": 3050
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 109,
+                        "startColumn": 4,
+                        "startOffset": 4140,
+                        "endColumn": 52,
+                        "endOffset": 4188
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 81,
+                    "startColumn": 4,
+                    "startOffset": 3055,
+                    "endColumn": 41,
+                    "endOffset": 3092
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 92,
+                        "startColumn": 4,
+                        "startOffset": 3148,
+                        "endColumn": 41,
+                        "endOffset": 3185
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 82,
+                    "startColumn": 4,
+                    "startOffset": 3097,
+                    "endColumn": 50,
+                    "endOffset": 3143
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 80,
+                        "startColumn": 4,
+                        "startOffset": 2832,
+                        "endColumn": 50,
+                        "endOffset": 2878
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 83,
+                    "startColumn": 4,
+                    "startOffset": 3148,
+                    "endColumn": 39,
+                    "endOffset": 3183
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 106,
+                        "startColumn": 4,
+                        "startOffset": 3990,
+                        "endColumn": 39,
+                        "endOffset": 4025
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 84,
+                    "startColumn": 4,
+                    "startOffset": 3188,
+                    "endColumn": 51,
+                    "endOffset": 3235
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 4,
+                        "startOffset": 1333,
+                        "endColumn": 51,
+                        "endOffset": 1380
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 85,
+                    "startColumn": 4,
+                    "startOffset": 3240,
+                    "endColumn": 62,
+                    "endOffset": 3298
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 4,
+                        "startOffset": 1385,
+                        "endColumn": 62,
+                        "endOffset": 1443
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 86,
+                    "startColumn": 4,
+                    "startOffset": 3303,
+                    "endColumn": 53,
+                    "endOffset": 3352
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 978,
+                        "endColumn": 53,
+                        "endOffset": 1027
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 87,
+                    "startColumn": 4,
+                    "startOffset": 3357,
+                    "endColumn": 49,
+                    "endOffset": 3402
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 60,
+                        "startColumn": 4,
+                        "startOffset": 2147,
+                        "endColumn": 49,
+                        "endOffset": 2192
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 88,
+                    "startColumn": 4,
+                    "startOffset": 3407,
+                    "endColumn": 51,
+                    "endOffset": 3454
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 1498,
+                        "endColumn": 51,
+                        "endOffset": 1545
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 89,
+                    "startColumn": 4,
+                    "startOffset": 3459,
+                    "endColumn": 49,
+                    "endOffset": 3504
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 110,
+                        "startColumn": 4,
+                        "startOffset": 4193,
+                        "endColumn": 49,
+                        "endOffset": 4238
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 90,
+                    "startColumn": 4,
+                    "startOffset": 3509,
+                    "endColumn": 50,
+                    "endOffset": 3555
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 112,
+                        "startColumn": 4,
+                        "startOffset": 4304,
+                        "endColumn": 50,
+                        "endOffset": 4350
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 91,
+                    "startColumn": 4,
+                    "startOffset": 3560,
+                    "endColumn": 50,
+                    "endOffset": 3606
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 93,
+                        "startColumn": 4,
+                        "startOffset": 3190,
+                        "endColumn": 50,
+                        "endOffset": 3236
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 92,
+                    "startColumn": 4,
+                    "startOffset": 3611,
+                    "endColumn": 53,
+                    "endOffset": 3660
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 120,
+                        "startColumn": 4,
+                        "startOffset": 4620,
+                        "endColumn": 53,
+                        "endOffset": 4669
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 93,
+                    "startColumn": 4,
+                    "startOffset": 3665,
+                    "endColumn": 40,
+                    "endOffset": 3701
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 65,
+                        "startColumn": 4,
+                        "startOffset": 2278,
+                        "endColumn": 40,
+                        "endOffset": 2314
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 94,
+                    "startColumn": 4,
+                    "startOffset": 3706,
+                    "endColumn": 60,
+                    "endOffset": 3762
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 107,
+                        "startColumn": 4,
+                        "startOffset": 4030,
+                        "endColumn": 60,
+                        "endOffset": 4086
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 95,
+                    "startColumn": 4,
+                    "startOffset": 3767,
+                    "endColumn": 44,
+                    "endOffset": 3807
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 97,
+                        "startColumn": 4,
+                        "startOffset": 3490,
+                        "endColumn": 44,
+                        "endOffset": 3530
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 96,
+                    "startColumn": 4,
+                    "startOffset": 3812,
+                    "endColumn": 43,
+                    "endOffset": 3851
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 69,
+                        "startColumn": 4,
+                        "startOffset": 2442,
+                        "endColumn": 43,
+                        "endOffset": 2481
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 97,
+                    "startColumn": 4,
+                    "startOffset": 3856,
+                    "endColumn": 46,
+                    "endOffset": 3898
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 98,
+                        "startColumn": 4,
+                        "startOffset": 3535,
+                        "endColumn": 46,
+                        "endOffset": 3577
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 98,
+                    "startColumn": 4,
+                    "startOffset": 3903,
+                    "endColumn": 42,
+                    "endOffset": 3941
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 70,
+                        "startColumn": 4,
+                        "startOffset": 2486,
+                        "endColumn": 42,
+                        "endOffset": 2524
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 99,
+                    "startColumn": 4,
+                    "startOffset": 3946,
+                    "endColumn": 42,
+                    "endOffset": 3984
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 99,
+                        "startColumn": 4,
+                        "startOffset": 3582,
+                        "endColumn": 42,
+                        "endOffset": 3620
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 100,
+                    "startColumn": 4,
+                    "startOffset": 3989,
+                    "endColumn": 38,
+                    "endOffset": 4023
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 61,
+                        "startColumn": 4,
+                        "startOffset": 2197,
+                        "endColumn": 38,
+                        "endOffset": 2231
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 101,
+                    "startColumn": 4,
+                    "startOffset": 4028,
+                    "endColumn": 46,
+                    "endOffset": 4070
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 105,
+                        "startColumn": 4,
+                        "startOffset": 3943,
+                        "endColumn": 46,
+                        "endOffset": 3985
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 102,
+                    "startColumn": 4,
+                    "startOffset": 4075,
+                    "endColumn": 52,
+                    "endOffset": 4123
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 71,
+                        "startColumn": 4,
+                        "startOffset": 2529,
+                        "endColumn": 52,
+                        "endOffset": 2577
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 103,
+                    "startColumn": 4,
+                    "startOffset": 4128,
+                    "endColumn": 49,
+                    "endOffset": 4173
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 4,
+                        "startOffset": 1448,
+                        "endColumn": 49,
+                        "endOffset": 1493
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 104,
+                    "startColumn": 4,
+                    "startOffset": 4178,
+                    "endColumn": 62,
+                    "endOffset": 4236
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 318,
+                        "endColumn": 62,
+                        "endOffset": 376
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 105,
+                    "startColumn": 4,
+                    "startOffset": 4241,
+                    "endColumn": 54,
+                    "endOffset": 4291
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 132,
+                        "startColumn": 4,
+                        "startOffset": 5106,
+                        "endColumn": 54,
+                        "endOffset": 5156
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 106,
+                    "startColumn": 4,
+                    "startOffset": 4296,
+                    "endColumn": 52,
+                    "endOffset": 4344
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 4,
+                        "startOffset": 1622,
+                        "endColumn": 52,
+                        "endOffset": 1670
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 107,
+                    "startColumn": 4,
+                    "startOffset": 4349,
+                    "endColumn": 63,
+                    "endOffset": 4408
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 101,
+                        "startColumn": 4,
+                        "startOffset": 3684,
+                        "endColumn": 63,
+                        "endOffset": 3743
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 108,
+                    "startColumn": 4,
+                    "startOffset": 4413,
+                    "endColumn": 72,
+                    "endOffset": 4481
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 103,
+                        "startColumn": 4,
+                        "startOffset": 3809,
+                        "endColumn": 72,
+                        "endOffset": 3877
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 109,
+                    "startColumn": 4,
+                    "startOffset": 4486,
+                    "endColumn": 65,
+                    "endOffset": 4547
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 596,
+                        "endColumn": 65,
+                        "endOffset": 657
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 110,
+                    "startColumn": 4,
+                    "startOffset": 4552,
+                    "endColumn": 71,
+                    "endOffset": 4619
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 1550,
+                        "endColumn": 71,
+                        "endOffset": 1617
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 111,
+                    "startColumn": 4,
+                    "startOffset": 4624,
+                    "endColumn": 60,
+                    "endOffset": 4680
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 104,
+                        "startColumn": 4,
+                        "startOffset": 3882,
+                        "endColumn": 60,
+                        "endOffset": 3938
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 112,
+                    "startColumn": 4,
+                    "startOffset": 4685,
+                    "endColumn": 58,
+                    "endOffset": 4739
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 100,
+                        "startColumn": 4,
+                        "startOffset": 3625,
+                        "endColumn": 58,
+                        "endOffset": 3679
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 113,
+                    "startColumn": 4,
+                    "startOffset": 4744,
+                    "endColumn": 60,
+                    "endOffset": 4800
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 102,
+                        "startColumn": 4,
+                        "startOffset": 3748,
+                        "endColumn": 60,
+                        "endOffset": 3804
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 114,
+                    "startColumn": 4,
+                    "startOffset": 4805,
+                    "endColumn": 60,
+                    "endOffset": 4861
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 111,
+                        "startColumn": 4,
+                        "startOffset": 4243,
+                        "endColumn": 60,
+                        "endOffset": 4299
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 115,
+                    "startColumn": 4,
+                    "startOffset": 4866,
+                    "endColumn": 63,
+                    "endOffset": 4925
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1032,
+                        "endColumn": 63,
+                        "endOffset": 1091
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 116,
+                    "startColumn": 4,
+                    "startOffset": 4930,
+                    "endColumn": 54,
+                    "endOffset": 4980
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 78,
+                        "startColumn": 4,
+                        "startOffset": 2718,
+                        "endColumn": 54,
+                        "endOffset": 2768
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 117,
+                    "startColumn": 4,
+                    "startOffset": 4985,
+                    "endColumn": 46,
+                    "endOffset": 5027
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 662,
+                        "endColumn": 46,
+                        "endOffset": 704
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 118,
+                    "startColumn": 4,
+                    "startOffset": 5032,
+                    "endColumn": 58,
+                    "endOffset": 5086
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 79,
+                        "startColumn": 4,
+                        "startOffset": 2773,
+                        "endColumn": 58,
+                        "endOffset": 2827
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 119,
+                    "startColumn": 4,
+                    "startOffset": 5091,
+                    "endColumn": 39,
+                    "endOffset": 5126
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 91,
+                        "startColumn": 4,
+                        "startOffset": 3108,
+                        "endColumn": 39,
+                        "endOffset": 3143
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 120,
+                    "startColumn": 4,
+                    "startOffset": 5131,
+                    "endColumn": 57,
+                    "endOffset": 5184
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 113,
+                        "startColumn": 4,
+                        "startOffset": 4355,
+                        "endColumn": 57,
+                        "endOffset": 4408
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 121,
+                    "startColumn": 4,
+                    "startOffset": 5189,
+                    "endLine": 127,
+                    "endColumn": 12,
+                    "endOffset": 5475
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 186,
+                        "endLine": 12,
+                        "endColumn": 12,
+                        "endOffset": 472
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 128,
+                    "startColumn": 4,
+                    "startOffset": 5480,
+                    "endLine": 130,
+                    "endColumn": 12,
+                    "endOffset": 5635
+                },
+                "from": {
+                    "file": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 510,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 665
+                    }
+                }
+            }
+        ]
+    }
+]

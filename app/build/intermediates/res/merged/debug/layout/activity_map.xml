@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/appbg"
+    android:orientation="vertical"
+    android:configChanges="keyboardHidden|orientation"
+    tools:context=".Map" >
+
+   <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Map Activity"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:paddingTop="30sp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/gotoGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:contentDescription="@string/Description"
+        android:onClick="backToGame"
+        android:src="@drawable/arrow_right" />
+    
+    <TextView
+        android:id="@+id/longitude_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignParentLeft="true"
+        android:text="Longitude:"
+        android:textColor="@color/white"
+        android:layout_above="@+id/latitude" />
+    
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@id/longitude_text"
+        android:layout_alignTop="@id/longitude_text"
+        android:layout_alignParentBottom="true" />
+    
+    <TextView
+        android:id="@+id/latitude_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latitude:"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true" />
+    
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@id/latitude_text"
+        android:layout_alignTop="@id/latitude_text"
+        android:layout_alignParentBottom="true" />
+    
+    
+
+</RelativeLayout>

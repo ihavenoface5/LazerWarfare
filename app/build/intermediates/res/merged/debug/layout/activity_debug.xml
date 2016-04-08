@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/appbg"
+    android:configChanges="keyboardHidden|orientation"
+    tools:context=".Debug"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/bluetoothStatus"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="Bluetooth Status: "/>
+
+    <TextView
+        android:id="@+id/event"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bluetoothStatus"
+        android:paddingTop="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="Last Event:"/>
+
+    <TextView
+        android:id="@+id/receivedLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event"
+        android:paddingTop="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="Received:"/>
+
+    <TextView
+        android:id="@+id/received"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/receivedLabel"
+        android:paddingTop="10dp"
+        android:textSize="20sp"
+        android:maxLines="5"
+        android:textColor="@color/white"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/sentLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingTop="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="Sent:"/>
+
+    <TextView
+        android:id="@+id/sent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sentLabel"
+        android:paddingTop="10dp"
+        android:textSize="20sp"
+        android:maxLines="5"
+        android:textColor="@color/white"
+        android:text=""/>
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Send"
+        android:onClick="sendMessage"/>
+
+    <EditText
+        android:id="@+id/sendEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/send"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:background="@android:drawable/editbox_background" />
+
+
+
+
+</RelativeLayout>

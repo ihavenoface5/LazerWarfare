@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\bluetooth.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\menu\\bluetooth.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\game.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\menu\\game.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\start_game.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\menu\\start_game.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\map.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\menu\\map.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\intro_video.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\menu\\intro_video.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\messages.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\menu\\messages.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\google_map_test.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\menu\\google_map_test.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\join_game.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\menu\\join_game.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\stats.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\menu\\stats.xml"
+    }
+]

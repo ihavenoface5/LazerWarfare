@@ -1,0 +1,146 @@
+[
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ammo.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\ammo.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bluetooth.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\bluetooth.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\title.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\title.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\health.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\health.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\join_a_game.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\join_a_game.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\lazerdudes.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\lazerdudes.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\gamestats.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\gamestats.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\start.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\start.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\long_border.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\long_border.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\wifi.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\wifi.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\biginfinity.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\biginfinity.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ingame.jpg",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\ingame.jpg"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\settings.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\settings.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\statstext.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\statstext.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\menu_infinity.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\menu_infinity.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\select_a_gun.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\select_a_gun.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\trash.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\trash.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\enter_your_name.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\enter_your_name.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\offline.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\offline.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\join.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\join.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\apply.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\apply.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ingameui.jpg",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\ingameui.jpg"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\clock.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\clock.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\back.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\back.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\arrow_left.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\arrow_left.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\short_border.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\short_border.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\new_game.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\new_game.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\refresh.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\refresh.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\join_game.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\join_game.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\arrow.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\arrow.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\biggerborder.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\biggerborder.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\startgame.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\startgame.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\appbg.jpg",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\appbg.jpg"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\arrow_right.png",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\arrow_right.png"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\gameselect.jpg",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\drawable-hdpi\\gameselect.jpg"
+    }
+]

@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/appbg"
+    android:orientation="vertical"
+    android:configChanges="keyboardHidden|orientation"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+    <TextView
+	   android:id="@+id/title"
+	   android:layout_width="match_parent"
+	   android:layout_height="wrap_content"
+	   android:textStyle="bold"
+	   android:gravity="center"
+	   android:text="@string/settingsTitle"
+	   android:textColor="@color/white"
+	   android:textSize="30sp" />
+    
+    <TextView
+	   android:id="@+id/wifi"
+	   android:layout_width="wrap_content"
+	   android:layout_height="wrap_content"
+	   android:layout_below="@id/title"
+	   android:paddingTop="30sp"
+	   android:gravity="center_vertical"
+	   android:textStyle="bold"
+	   android:text="@string/wifiText"
+	   android:textColor="@color/white"
+	   android:textSize="18sp" />
+    
+    <Spinner
+        android:id="@+id/wifiSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+		android:layout_alignBaseline="@id/wifi"
+        android:layout_toRightOf="@id/wifi"
+        android:layout_alignTop="@id/wifi"
+		android:layout_marginTop="15dp"
+        android:entries="@array/wifiReceiveWindow"
+        android:prompt="@string/wifiText" />
+    
+    <TextView
+	    android:id="@+id/bluetoothDebug"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_vertical"
+        android:layout_centerInParent="true"
+	    android:textStyle="bold"
+	    android:clickable="true"
+	    android:text="@string/bluetoothDebug"
+	    android:textColor="@color/white"
+	    android:drawableLeft="@drawable/bluetooth"
+	    android:textSize="20sp" />
+    
+    <TextView
+	    android:id="@+id/deleteProfile"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_vertical"
+        android:layout_below="@id/bluetoothDebug"
+	    android:textStyle="bold"
+	    android:clickable="true"
+	    android:text="@string/deleteProfile"
+	    android:textColor="@color/white"
+	    android:drawableLeft="@drawable/trash"
+	    android:textSize="20sp" />
+    
+    <TextView
+	    android:id="@+id/back"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textStyle="bold"
+	    android:clickable="true"
+	    android:gravity="center_vertical"
+	    android:text="@string/back"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentRight="true"
+	    android:textColor="@color/white"
+	    android:drawableRight="@drawable/back"
+	    android:textSize="20sp" />
+    
+  
+    
+    
+
+
+</RelativeLayout>

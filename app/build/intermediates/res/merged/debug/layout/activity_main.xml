@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/appbg"
+    android:orientation="vertical"
+    android:configChanges="keyboardHidden|orientation"
+    tools:context=".MainActivity" >
+    
+	<ImageView
+	   android:id="@+id/title"
+	   android:layout_width="wrap_content"
+	   android:layout_height="wrap_content"
+	   android:contentDescription="@string/Description"
+	   android:layout_centerHorizontal="true"
+	   android:src="@drawable/title" />
+	    
+	<TextView
+	   android:id="@+id/start"
+	   android:layout_width="match_parent"
+	   android:layout_height="wrap_content"
+	   android:layout_below="@id/title"
+	   android:gravity="center_vertical"
+	   android:textStyle="bold"
+	   android:clickable="true"
+	   android:text="@string/startText"
+	   android:textColor="@color/white"
+	   android:drawableLeft="@drawable/start"
+	   android:textSize="20sp" />
+	
+	<TextView
+	   android:id="@+id/join"
+	   android:layout_width="match_parent"
+	   android:layout_height="wrap_content"
+	   android:layout_below="@id/start"
+	   android:gravity="center_vertical"
+	   android:textStyle="bold"
+	   android:clickable="true"
+	   android:text="@string/joinText"
+	   android:textColor="@color/white"
+	   android:drawableLeft="@drawable/join"
+	   android:textSize="20sp" />
+	
+	<TextView
+	   android:id="@+id/offline"
+	   android:layout_width="match_parent"
+	   android:layout_height="wrap_content"
+	   android:layout_below="@id/join"
+	   android:gravity="center_vertical"
+	   android:textStyle="bold"
+	   android:clickable="true"
+	   android:text="@string/offlineText"
+	   android:textColor="@color/white"
+	   android:paddingLeft="2sp"
+	   android:drawableLeft="@drawable/offline"
+	   android:textSize="20sp" />
+	
+	<TextView
+	   android:id="@+id/settings"
+	   android:layout_width="match_parent"
+	   android:layout_height="wrap_content"
+	   android:layout_below="@id/offline"
+	   android:gravity="center_vertical"
+	   android:textStyle="bold"
+	   android:clickable="true"
+	   android:text="@string/settingsText"
+	   android:textColor="@color/white"
+	   android:paddingLeft="2sp"
+	   android:drawableLeft="@drawable/settings"
+	   android:textSize="20sp" />
+</RelativeLayout>

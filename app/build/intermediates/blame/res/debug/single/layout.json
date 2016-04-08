@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_game.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\layout\\activity_game.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_map.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\layout\\activity_map.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_messages.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\layout\\activity_messages.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_debug.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\layout\\activity_debug.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\layout\\simplerow.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\layout\\simplerow.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_start_game.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\layout\\activity_start_game.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_join_game.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\layout\\activity_join_game.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_settings.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_stats.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\layout\\activity_stats.xml"
+    },
+    {
+        "merged": "D:\\Android\\LazerWarfare\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_intro_video.xml",
+        "source": "D:\\Android\\LazerWarfare\\app\\src\\main\\res\\layout\\activity_intro_video.xml"
+    }
+]

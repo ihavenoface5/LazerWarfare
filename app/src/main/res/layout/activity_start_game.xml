@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/appbg"
+    tools:context=".StartGame" >
+
+    <TextView
+    	android:id="@+id/gameTypeText"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/gameType"
+         />
+
+     <Spinner
+         android:id="@+id/gameTypeSpinner"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/gameTypeText"
+         android:layout_marginTop="15dp"
+         android:entries="@array/gameTypeArray" />
+     
+     <TextView
+    	android:id="@+id/gameSettingsText"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/gameSettings"
+    	android:layout_below="@id/gameTypeSpinner"
+    	android:layout_marginTop="15dp"
+         />
+     
+     <TextView
+    	android:id="@+id/scoreLimitText"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/scoreLimit"
+    	android:layout_below="@id/gameSettingsText"
+    	android:layout_marginTop="50dp"
+         />
+     
+     <Spinner
+         android:id="@+id/scoreLimitSpinner"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignBaseline="@id/scoreLimitText"
+         android:layout_toRightOf="@id/scoreLimitText"
+         android:layout_marginTop="15dp"
+         android:layout_marginLeft="90dp"
+         android:entries="@array/scoreLimitArray" />
+     
+     <TextView
+    	android:id="@+id/timeLimitText"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/timeLimit"
+    	android:layout_below="@id/scoreLimitText"
+    	android:layout_marginTop="25dp"
+         />
+     
+     
+     <Spinner
+         android:id="@+id/timeLimitSpinner"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignBaseline="@id/timeLimitText"
+         android:layout_toRightOf="@id/timeLimitText"
+         android:layout_marginTop="25dp"
+         android:layout_marginLeft="90dp"
+         android:entries="@array/timeLimitArray" />
+     
+     <TextView
+    	android:id="@+id/selectTeamText"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/selectTeam"
+    	android:layout_below="@id/timeLimitText"
+    	android:layout_marginTop="25dp"
+         />
+     
+     <Spinner
+         android:id="@+id/teamSpinner"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignBaseline="@id/selectTeamText"
+         android:layout_toRightOf="@id/selectTeamText"
+         android:layout_marginLeft="90dp"
+         android:entries="@array/teamArray" />
+     
+     <ImageButton
+         android:id="@+id/new_game"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentRight="true"
+         android:layout_below="@id/selectTeamText"
+         android:layout_marginTop="100dp"
+         android:background="@null"
+         android:contentDescription="@string/Description"
+         android:onClick="startGame"
+         android:src="@drawable/startgame" />
+
+</RelativeLayout>

@@ -1,0 +1,255 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/appbg"
+    tools:context=".Game"
+    android:orientation="vertical"
+    android:configChanges="keyboardHidden|orientation" >
+        
+    <ImageView
+        android:id="@+id/timeBorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/Description"
+        android:paddingTop="25sp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/long_border" />
+    
+    <TextView 
+       	android:id="@+id/time"
+       	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:text="@string/time"
+		android:textSize="23sp"
+		android:layout_alignBottom="@id/timeBorder"
+		android:layout_alignRight="@id/timeBorder"
+		android:gravity="right"
+		android:paddingRight="35sp"
+		android:paddingBottom="15sp"
+		android:textColor="@color/white" />
+    
+    <ImageButton
+  		android:id="@+id/infiniteTime"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:contentDescription="@string/Description"
+  		android:background="@null"
+  		android:layout_alignBottom="@id/timeBorder"
+		android:layout_alignRight="@id/timeBorder"
+		android:paddingRight="5sp"
+		android:visibility="gone"
+    	android:src="@drawable/biginfinity" />
+    
+    <ImageView
+        android:id="@+id/clockSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/clock"
+        android:contentDescription="@string/Description"
+        android:layout_alignBottom="@id/timeBorder"
+		android:layout_alignRight="@id/timeBorder"
+        android:paddingRight="110sp"
+		android:paddingBottom="10sp" />
+    
+    <TextView
+		android:id="@+id/timeLeftText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/timeLeft"
+		android:textSize="22sp"
+		android:textColor="@color/white"
+		android:layout_alignLeft="@id/timeBorder"
+		android:layout_alignBottom="@id/timeBorder"
+		android:paddingBottom="15sp"
+		android:paddingLeft="20sp"
+		android:contentDescription="@string/Description" />
+
+    <ImageView
+        android:id="@+id/team1ScoreBorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/short_border"
+        android:layout_below="@id/timeBorder"
+        android:layout_alignLeft="@id/timeBorder"
+        android:paddingTop="15sp"
+        android:contentDescription="@string/Description" />
+    
+    
+    <TextView 
+       	android:id="@+id/team1Score"
+       	android:layout_width="90sp"
+        android:layout_height="wrap_content"
+		android:text="@string/startScore"
+		android:layout_alignBottom="@id/team1ScoreBorder"
+		android:layout_alignLeft="@id/team1ScoreBorder"
+		android:paddingBottom="20sp"
+		android:gravity="center"
+		android:textSize="20sp"
+		android:textColor="@color/white" />
+    
+    <ImageView
+        android:id="@+id/lazerdudes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/lazerdudes"
+        android:layout_toRightOf="@id/team1ScoreBorder"
+        android:layout_below="@id/timeBorder"
+        android:paddingTop="5sp"
+        android:onClick="sendTest"
+        android:contentDescription="@string/Description" />
+    
+    <ImageView
+        android:id="@+id/team2ScoreBorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/short_border"
+        android:layout_below="@id/timeBorder"
+        android:layout_alignRight="@id/timeBorder"
+        android:paddingTop="15sp"
+        android:contentDescription="@string/Description" />
+    
+    <TextView 
+       	android:id="@+id/team2Score"
+       	android:layout_width="90sp"
+        android:layout_height="wrap_content"
+		android:text="@string/startScore"
+		android:textSize="20sp"
+		android:layout_alignBottom="@id/team2ScoreBorder"
+		android:layout_alignRight="@id/team2ScoreBorder"
+		android:paddingBottom="20sp"
+		android:gravity="center"
+		android:textColor="@color/white" />
+    
+    <TextView
+		android:id="@+id/waiting"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:layout_centerVertical="true"
+		android:layout_centerHorizontal="true"
+		android:paddingBottom="40sp"
+		android:textColor="@color/white"
+		android:textSize="20sp" />
+    
+    <ImageView
+        android:id="@+id/healthSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/health"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:paddingBottom="30sp"
+        android:paddingLeft="20sp"
+        android:layout_alignLeft="@id/team1ScoreBorder"
+        android:contentDescription="@string/Description" /> 
+    
+    <TextView
+        android:id="@+id/health"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/healthSymbol"
+        android:layout_toRightOf="@id/healthSymbol"
+        android:paddingBottom="30sp"
+        android:paddingLeft="15sp"
+        android:text="@string/health"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    
+    <ImageView
+        android:id="@+id/ammoSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ammo"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="30sp"
+        android:paddingRight="20sp"
+        android:contentDescription="@string/Description" /> 
+    
+    <TextView 
+       	android:id="@+id/ammo"
+       	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/ammoSymbol"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="30sp"
+        android:paddingRight="15sp"
+        android:gravity="left"
+		android:text="@string/ammo"
+		android:textSize="20sp"
+		android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/serverStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_alignParentLeft="true"
+        android:text="Connection Status:"
+        android:layout_above="@id/bluetoothStatus"
+        android:paddingBottom="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/bluetoothStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_alignParentLeft="true"
+        android:text="Bluetooth Status:"
+        android:layout_above="@+id/scoreBorder"
+        android:paddingBottom="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/pairedGun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="30sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="gone" />
+    
+    <ImageView
+        android:id="@+id/scoreBorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/long_border"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="75sp"
+        android:contentDescription="@string/Description" />
+    
+    <TextView
+       android:id="@+id/scoreText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/score"
+       android:textSize="22sp"
+	   android:textColor="@color/white"
+	   android:layout_alignLeft="@id/scoreBorder"
+	   android:layout_alignParentBottom="true"
+	   android:paddingBottom="90sp"
+	   android:paddingLeft="40sp"
+       android:contentDescription="@string/Description" />
+    
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+		android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@id/scoreBorder"
+        android:paddingBottom="90sp"
+	   	android:paddingRight="80sp"
+        android:gravity="center"
+        android:text="@string/startScore" />
+    
+</RelativeLayout>
