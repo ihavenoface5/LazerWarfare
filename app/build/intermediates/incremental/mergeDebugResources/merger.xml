@@ -17,7 +17,7 @@
         <item>Select a team</item>
         <item>Empire</item>
         <item>Alliance</item>
-    </string-array><string name="ammo">15</string><string ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content" name="enterServerText">Server (ip/name only)</string><string name="title_activity_messages">Messages</string><string name="username">Username:</string><string-array name="timeLimitArray">
+    </string-array><string name="ammo">15</string><string name="enterServerText" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Server (ip/name only)</string><string name="title_activity_messages">Messages</string><string name="username">Username:</string><string-array name="timeLimitArray">
         <item>No Limit</item>
         <item>5</item>
         <item>10</item>

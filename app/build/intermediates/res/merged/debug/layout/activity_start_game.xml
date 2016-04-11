@@ -10,6 +10,7 @@
     	android:layout_width="wrap_content"
     	android:layout_height="wrap_content"
     	android:text="@string/gameType"
+        android:textSize="20dp"
          />
 
      <Spinner
@@ -19,6 +20,7 @@
          android:layout_alignParentLeft="true"
          android:layout_below="@+id/gameTypeText"
          android:layout_marginTop="15dp"
+         android:textSize="20dp"
          android:entries="@array/gameTypeArray" />
      
      <TextView
@@ -28,6 +30,7 @@
     	android:text="@string/gameSettings"
     	android:layout_below="@id/gameTypeSpinner"
     	android:layout_marginTop="15dp"
+         android:textSize="20dp"
          />
      
      <TextView
@@ -89,18 +92,67 @@
          android:layout_toRightOf="@id/selectTeamText"
          android:layout_marginLeft="90dp"
          android:entries="@array/teamArray" />
-     
+
+     <TextView
+        android:id="@+id/startGameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Game"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/new_game"
+        android:layout_marginTop="60dp"
+        android:paddingLeft="10dp"
+        android:textSize="20dp"
+        android:layout_below="@id/selectTeamText"
+        />
+
+    <TextView
+        android:id="@+id/retryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retry"
+        android:layout_alignParentLeft="true"
+        android:layout_alignLeft="@+id/refreshButton"
+        android:layout_marginTop="60dp"
+        android:paddingLeft="70dp"
+        android:textSize="20dp"
+        android:layout_below="@id/selectTeamText"
+        />
+
+    <ImageButton
+        android:id="@+id/refreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_below="@id/selectTeamText"
+        android:layout_marginTop="85dp"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="50dp"
+        android:contentDescription="@string/Description"
+        android:onClick="retryConnection"
+        android:src="@drawable/refresh" />
+
      <ImageButton
          android:id="@+id/new_game"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
          android:layout_alignParentRight="true"
+         android:paddingRight="50dp"
          android:layout_below="@id/selectTeamText"
-         android:layout_marginTop="100dp"
+         android:layout_marginTop="80dp"
          android:background="@null"
          android:contentDescription="@string/Description"
          android:onClick="startGame"
          android:src="@drawable/startgame" />
+
+    <TextView
+        android:id="@+id/connectionStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connection Status:"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="20dp"
+        />
 
 </RelativeLayout>

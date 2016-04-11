@@ -15,6 +15,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.GestureDetector.OnGestureListener;
@@ -47,19 +48,21 @@ public class Game extends Activity implements OnGestureListener,BleManager.BleMa
 	TextView team2Score;
 	TextView ammo;
 	TextView score;
-	TextView waitTime;
     TextView bluetooth;
     TextView server;
+    TextView pairedGun;
+    TextView gameId;
 	ImageButton infinity;
 	TextView waiting;
     public static Handler mhandler;
 	public static Handler handler;
 	public static Handler handler1;
 	public static Handler handler2;
+    Runnable syncRunnable;
 
 	String waitingText = "Waiting for Players...";
 	String respawnText = "Recharging...";
-	TextView pairedGun;
+
     protected BleManager mBleManager;
     protected BluetoothGattService mUartService;
     private BleDevicesScanner mScanner;
@@ -87,6 +90,7 @@ public class Game extends Activity implements OnGestureListener,BleManager.BleMa
 		infinity = (ImageButton) findViewById(R.id.infiniteTime);
 		waiting = (TextView) findViewById(R.id.waiting);
 		pairedGun = (TextView) findViewById(R.id.pairedGun);
+        gameId = (TextView) findViewById(R.id.gameId);
         bluetooth = (TextView) findViewById(R.id.bluetoothStatus);
         server = (TextView) findViewById(R.id.serverStatus);
 
@@ -98,13 +102,14 @@ public class Game extends Activity implements OnGestureListener,BleManager.BleMa
         mBleManager.setBleListener(Game.this);
         mhandler = new Handler();
 
+
         //Debugging
         Log.w(TAG, "Player name: " + Player.name);
+        Log.i(TAG, "Time limit is: " + Integer.toString(Player.time_limit));
 
 		Player.respawn = Player.respawnTime;
 		if (Player.gunId != -1)
-		{
-            Log.w(TAG, "This happened!");
+        {
 			pairedGun.setText("Gun:" + Integer.toString(Player.gunId));
 			pairedGun.setVisibility(View.VISIBLE);
 		}
@@ -112,9 +117,15 @@ public class Game extends Activity implements OnGestureListener,BleManager.BleMa
         {
             Log.w(TAG, "Gun id: " + Player.gunId);
         }
-		
+
+        if (Player.gameId != 0)
+        {
+            gameId.setText("Game ID: " + Integer.toString(Player.gameId));
+            gameId.setVisibility(View.VISIBLE);
+        }
 		if (Player.time_limit == 999)
 		{
+            Player.time_limit *= 60;
 			Player.delay = 0;
 			//Hide timer, show infinity, don't have timer running
 			timer.setVisibility(View.GONE);
@@ -127,54 +138,43 @@ public class Game extends Activity implements OnGestureListener,BleManager.BleMa
 		}
 		else
 		{
-			//Normal timing conditions
+			//Server based timing
 			if (Player.time_limit == 998)
 			{
+                Log.i(TAG, "Here");
+                Player.time_limit *= 60;
 				timer.setVisibility(View.GONE);
 				infinity.setVisibility(View.VISIBLE);
 			}
 			else
 			{
-				timer.setText(Integer.toString(Player.time_limit) + ":00");
+                Log.i(TAG, "Here1");
+				timer.setText(Integer.toString(Player.time_limit/60) + ":" + Integer.toString(Player.time_limit % 60));
 			}
 
 			handler1 = new Handler();
-			final Runnable runnable1 = new Runnable() {
+			syncRunnable = new Runnable() {
 				   @Override
 				   public void run() {
-				      Player.sync();
+				      Player.sync(Game.this);
 				      handler1.postDelayed(this, 3000);
 				   }
 				};
-			
-			handler2 = new Handler();
-			final Runnable runnable2 = new Runnable() {
-				   @Override
-				   public void run(){
-					  if (Player.delay > 0)
-					  {
-						  waiting.setText(waitingText + Integer.toString(Player.delay));
-						  Player.delay--;
-					      handler1.postDelayed(this, 1000);
-					  }
-				   }
-				};
-			handler2.postDelayed(runnable2, 0);
 			
 			Runnable runnable = new Runnable() {
 				   @Override
 				   public void run() {
 				      update();
-				      waiting.setVisibility(View.GONE);
 				      MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.fight); 
                   	  mp.start();
-				      handler2.removeCallbacks(runnable2);
-				      handler1.postDelayed(runnable1, 3000);
+				      handler1.postDelayed(syncRunnable, 3000);
 				   }
 				};
 			handler = new Handler();
 			
 			handler.postDelayed(runnable, Player.delay*1000);
+
+            Log.i(TAG, "Player Delay: " + Integer.toString(Player.delay));
 		  
 		}
 	}
@@ -211,7 +211,7 @@ public class Game extends Activity implements OnGestureListener,BleManager.BleMa
 	
 	public void update(){
 		
-		new CountDownTimer(Player.time_limit * 60 * 1000, 1000) {
+		new CountDownTimer(Player.time_limit * 1000, 1000) {
 		
 		     @SuppressLint("NewApi") public void onTick(long millis) {
 		    	 String time = "";
@@ -246,7 +246,21 @@ public class Game extends Activity implements OnGestureListener,BleManager.BleMa
 		    	 team1Score.setText(Integer.toString(Player.team1Score));
 		    	 team2Score.setText(Integer.toString(Player.team2Score));
                  bluetooth.setText("Bluetooth Status: " + bluetoothStatus);
-                 server.setText("Server Status: " + serverStatus);
+
+                 if (Player.isConnected == 1) {
+                     serverStatus = "Connected";
+                     server.setText("Connection Status: " + serverStatus);
+                 }
+                 else if (Player.isConnected == 0)
+                 {
+                     serverStatus = "Disconnected";
+                     server.setText("Connection Status: " + serverStatus);
+                 }
+                 else
+                 {
+                     serverStatus = "Bad Request";
+                     server.setText("Connection Status: " + serverStatus);
+                 }
 		    	 
 		    	 if (Player.health == 0 || Player.ammo == 0)
 		    	 {
@@ -380,6 +394,9 @@ public class Game extends Activity implements OnGestureListener,BleManager.BleMa
         Log.i(TAG, "Stopping Bluetooth");
         if (mBleManager != null)
             mBleManager.close();
+        if (handler1 != null) {
+            handler1.removeCallbacks(syncRunnable);
+        }
         super.onStop();
     }
 
@@ -418,6 +435,7 @@ public class Game extends Activity implements OnGestureListener,BleManager.BleMa
 
     @Override
     public void onDisconnected() {
+        Looper.prepare();
         //Prompt for reconnection
         bluetoothStatus = "Disconnected";
         startScan();
@@ -673,27 +691,32 @@ public class Game extends Activity implements OnGestureListener,BleManager.BleMa
         {
             Log.i(TAG, "Dialog cannot start - no devices found");
             builder.setTitle("Connect to BLE Device")
-                    .setMessage("No Bluetooth Low Energy Devices Detected. Press OK to scan again")
+                    .setMessage("No Bluetooth Low Energy Devices Detected. Make sure your Location Setting is set to High Accuracy. Press OK to scan again")
                     .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
                             startScan();
+                            dialog.dismiss();
                         }
                     })
                     .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
                             // Canceled.
                             dialog.cancel();
+                            Game.this.finish();
+                            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                        }
+                    })
+                    .setOnCancelListener(new DialogInterface.OnCancelListener() {
+                        @Override
+                        public void onCancel(DialogInterface dialog) {
+                            Game.this.finish();
+                            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                         }
                     });
             // Show dialog
             AlertDialog dialog = builder.create();
             dialog.show();
         }
-    }
-
-    public void sendTest(View v)
-    {
-        sendData("H5".getBytes());
     }
 
 }

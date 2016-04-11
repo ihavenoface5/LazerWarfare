@@ -3,25 +3,26 @@ package com.lazerwarfare;
 import android.content.Context;
 import android.net.ConnectivityManager;
 
-import com.loopj.android.http.*;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+import com.loopj.android.http.ResponseHandlerInterface;
 
-import org.json.JSONArray;
-
-import cz.msebera.android.httpclient.Header;
+import cz.msebera.android.httpclient.HttpEntity;
 
 public class HttpConnect {
-	  public static boolean serverConnection = false;
-	  public static String BASE_URL = "none"; //TODO: remove and parameterize
+	  public static String BASE_URL = ""; //TODO: remove and parameterize
 	
-	  final static int DEFAULT_TIMEOUT = 20 * 1000; //TODO: allow user to configure / parameterize
+	  final static int DEFAULT_TIMEOUT = 5 * 1000; //TODO: allow user to configure / parameterize
 	  private static AsyncHttpClient client = new AsyncHttpClient();
 	
 	  public static void get(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
 	      client.get(getAbsoluteUrl(url), params, responseHandler);
 	  }
-	
-	  public static void post(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
-	      client.post(getAbsoluteUrl(url), params, responseHandler);
+
+		//post(Context context, String url, HttpEntity entity, String contentType, ResponseHandlerInterface responseHandler
+	  public static void post(Context context, String url, HttpEntity entity, ResponseHandlerInterface responseHandler) {
+	      client.post(context, getAbsoluteUrl(url), entity, "application/json", responseHandler);
 	  }
 	
 	  private static String getAbsoluteUrl(String relativeUrl) {
@@ -39,15 +40,5 @@ public class HttpConnect {
 	  public static boolean isNetworkAvailable(Context context) 
 	  {
 		  return ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo() != null;
-	  }
-	  
-	  public static void serverConnection()
-	  {
-		  get("games", null, new JsonHttpResponseHandler() {
-	            @Override
-	            public void onSuccess(int statusCode, Header[] headers, JSONArray gamesArray) {
-	            	serverConnection = true;
-	            }
-	        });
 	  }
 }

@@ -8,10 +8,20 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Spinner;
-import android.widget.Toast;
+import android.widget.TextView;
+
+import com.loopj.android.http.JsonHttpResponseHandler;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import cz.msebera.android.httpclient.Header;
 
 public class StartGame extends Activity {
-	
+	public String TAG = "StartGame";
+    public TextView connectionStatus;
+    public String connectionText = "Connection Status: ";
+    public int serverConnection = -1;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -21,6 +31,10 @@ public class StartGame extends Activity {
 		final Spinner scoreLimit = (Spinner) findViewById(R.id.scoreLimitSpinner);
 		final Spinner timeLimit = (Spinner) findViewById(R.id.timeLimitSpinner);
 		final Spinner teamSelect = (Spinner) findViewById(R.id.teamSpinner);
+
+        connectionStatus = (TextView) findViewById(R.id.connectionStatus);
+
+        checkConnection();
 		
 		 gameMode.setOnItemSelectedListener(new OnItemSelectedListener() {
 	            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
@@ -47,7 +61,7 @@ public class StartGame extends Activity {
 	            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
 	            	if (scoreLimit.getItemAtPosition(position).equals("No Limit"))
 	            	{
-	            		Player.score_limit = 998;
+	            		Player.score_limit = 0;
 	            	}
 	            	else
 	            	{
@@ -67,11 +81,15 @@ public class StartGame extends Activity {
 	            	if (timeLimit.getItemAtPosition(position).equals("No Limit"))
 	            	{
 	            		Player.time_limit = 998;
+                        Log.w(TAG, "IT happened HERE!");
 	            	}
 	            	else
 	            	{
 	            		Player.time_limit = Integer.parseInt(timeLimit.getItemAtPosition(position).toString());
+						Player.time_limit *= 60;
+                        Log.i(TAG, "Time limit: " + Player.time_limit);
 	            	}
+                    Log.i(TAG, "position selected: " + Integer.toString(position));
 	            	Log.i("Start JSON", "Time Limit: " + Integer.toString(Player.time_limit));
 	            }
 	            
@@ -82,16 +100,16 @@ public class StartGame extends Activity {
 		 });
 		 
 		 teamSelect.setOnItemSelectedListener(new OnItemSelectedListener() {
-	            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-	            	Player.team = teamSelect.getItemAtPosition(position).toString();
-	            	Log.i("Start JSON", "Team: " + Player.team);
-	            }
-	            
-				public void onNothingSelected(AdapterView<?> arg0) {
-					// TODO Auto-generated method stub
-					//Do nothing
-				}
-		 });
+             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                 Player.team = teamSelect.getItemAtPosition(position).toString();
+                 Log.i("Start JSON", "Team: " + Player.team);
+             }
+
+             public void onNothingSelected(AdapterView<?> arg0) {
+                 // TODO Auto-generated method stub
+                 //Do nothing
+             }
+         });
 	};
 
 	@Override
@@ -108,18 +126,48 @@ public class StartGame extends Activity {
 		overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
 	}
 
+    public void checkConnection()
+    {
+        connectionStatus.setText(connectionText + "Connecting...");
+		Log.i(TAG, "Connecting to: " + HttpConnect.BASE_URL);
+        HttpConnect.get("games", null, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONArray gamesArray) {
+                connectionStatus.setText(connectionText + "Connected");
+                serverConnection = 1;
+				Player.saveServer(StartGame.this);
+            }
+
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject response) {
+                connectionStatus.setText(connectionText + "Connection Failed");
+                Log.w(TAG, "Failed to get response");
+                serverConnection = 0;
+            }
+        });
+    }
+
+    public void retryConnection(View v)
+    {
+        checkConnection();
+    }
+
 	public void startGame(View v)
 	{
-		if (HttpConnect.isNetworkAvailable(getApplicationContext()))
+		if (serverConnection == 1)
 		{
+			Log.w(TAG, "Starting Game!");
 			Player.startGame(this);
-			Toast.makeText(this, "Connection failed. Please check connection and try again.", Toast.LENGTH_LONG).show();
 		}
-		else
-		{
-			Log.i("startGame", "NO WIFI!!!!\n");
-			Toast.makeText(this, "No Wifi connectivity!", Toast.LENGTH_LONG).show(); 
-		}
+		else if (serverConnection == 0)
+        {
+            Log.w(TAG, "Failed to connect to server");
+            Player.basicDialog(this, "Connection to Server Failed",
+                    "Please establish a connection to the server before starting a game");
+        }
+        else
+        {
+            //no response yet from checking server connection
+        }
 	}
 
 }

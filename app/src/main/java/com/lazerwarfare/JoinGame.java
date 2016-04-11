@@ -14,7 +14,7 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 
@@ -22,14 +22,20 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import cz.msebera.android.httpclient.Header;
 
 public class JoinGame extends Activity {
-	public static String dateFormat = "yyyy-MM-ddThh:mm:ssZ";
+    public String TAG = "JoinGame";
 	public Vibrator v;
 	public RadioGroup teamRadio;
 	public GridView gamesGrid;
-	public ArrayAdapter<String> gameAdapter; 
+	public ArrayAdapter<String> gameAdapter;
+	public TextView connectionStatus;
+	public String connectionText = "Status: ";
+	public int serverConnection = -1;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +45,8 @@ public class JoinGame extends Activity {
 		
 		teamRadio = (RadioGroup) findViewById(R.id.radioGroup1);
 		gamesGrid = (GridView) findViewById(R.id.gamesGrid);
-		
+
+		connectionStatus = (TextView) findViewById(R.id.connectionStatus);
 		refresh();
 		
 		gameAdapter = new ArrayAdapter<String> (this, android.R.layout.simple_list_item_1);
@@ -59,6 +66,7 @@ public class JoinGame extends Activity {
 				try {
 				Log.i("Join", "Team Selected: " + Integer.toString(Player.teamSelect));
 				Player.gameId = Player.games.getJSONObject(position).getInt("id");
+                Log.i(TAG, "Joining game: " + Integer.toString(position) + " with id: " + Integer.toString(Player.gameId));
 				Player.gameType = Player.games.getJSONObject(position).getString("mode");
 				if (Player.gameType.equals("TEAMS"))
 				{
@@ -105,10 +113,15 @@ public class JoinGame extends Activity {
 	}
 
 	public void refresh() {
+		connectionStatus.setText(connectionText + "Connecting");
 		Log.i("Join Game", "Getting available games...");
 		HttpConnect.get("games?joinable", null, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray gamesArray) {
+                Log.i(TAG, "Found games: " + gamesArray.toString());
+				serverConnection = 1;
+				Player.saveServer(JoinGame.this);
+				connectionStatus.setText(connectionText + "Connected");
             	Player.games = gamesArray;
             	Player.tempGames = gamesArray;
             	Log.i("Join Game", "Response Received!");
@@ -117,18 +130,36 @@ public class JoinGame extends Activity {
             	for (int i = 0; i < gamesArray.length(); i++)
             	{
             		try {
-						gameAdapter.add(gamesArray.getJSONObject(i).getString("mode"));
-					} catch (JSONException e) {
+                        String gameEntry = "";
+
+                        gameEntry += Integer.toString(gamesArray.getJSONObject(i).getInt("id"));
+						gameEntry += ":\t" + gamesArray.getJSONObject(i).getString("mode");
+
+                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
+                        SimpleDateFormat display = new SimpleDateFormat("MM/dd");
+						Date timePlayed = format.parse(gamesArray.getJSONObject(i).getString("time_played"));
+                        gameEntry += "\t" + display.format(timePlayed);
+
+
+                        gameAdapter.add(gameEntry);
+					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
             	}
+                gameAdapter.notifyDataSetChanged();
             	gamesGrid.setAdapter(gameAdapter);
-            	v.vibrate(500);
             }
-            public void onFailure(Throwable t, JSONObject object)
+            public void onFailure(int status, Header[] headers, Throwable throwable, JSONObject response)
             {
-            	Toast.makeText(getApplicationContext(), "Connection to server failed!", Toast.LENGTH_LONG).show();
+                if (status == 400)
+                {
+                    connectionStatus.setText(connectionText + "Bad Request");
+                }
+                else {
+                    serverConnection = 0;
+                    connectionStatus.setText(connectionText + "Offline");
+                }
             }
         });
 	}

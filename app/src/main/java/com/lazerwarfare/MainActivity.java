@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
+    public String TAG = "MainActivity";
 	final Context context = this;
 	static final boolean DEBUG = true;
 	public static String url = "";
@@ -42,7 +44,15 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				if (HttpConnect.isNetworkAvailable(context)) {
                     HttpConnect.init();
-					Player.promptServer(context, "start");
+                    Log.i(TAG, "Base URL is: " + HttpConnect.BASE_URL);
+					if (HttpConnect.BASE_URL == "") {
+						Player.promptServer(context, "start");
+					}
+                    else {
+                        Intent intent = new Intent(MainActivity.this, StartGame.class);
+                        startActivity(intent);
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                    }
 				} else {
 					Player.basicDialog(context, "Network Unavailable", "Please connect to wifi before using this feature.");
 				}
@@ -56,7 +66,14 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				if (HttpConnect.isNetworkAvailable(context)) {
                     HttpConnect.init();
-					Player.promptServer(context, "join");
+					if (HttpConnect.BASE_URL == "") {
+						Player.promptServer(context, "join");
+					}
+                    else {
+                        Intent intent = new Intent(MainActivity.this, JoinGame.class);
+                        startActivity(intent);
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                    }
 				} else {
 					Player.basicDialog(context, "Network Unavailable", "Please connect to wifi before using this feature.");
 				}

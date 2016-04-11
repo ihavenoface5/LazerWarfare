@@ -16,7 +16,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
-import com.loopj.android.http.RequestParams;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,6 +24,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 import cz.msebera.android.httpclient.Header;
+import cz.msebera.android.httpclient.entity.StringEntity;
 
 public class Player {
 	static String TAG = "Player";
@@ -46,33 +46,34 @@ public class Player {
 	static int ammoReload = 15;
 	static int hitDamage = 10;
 	static String gameType;
-	static String gameState;
 	static JSONArray teams = new JSONArray();
 	static int score_limit = 0;
-	static int time_limit = 30;
-	static int time_left = 0;
-	static int delay = 60;
+	static int time_limit = 30*60;
+	static int delay = 0;
 	static int respawnTime = 10;
 	static int respawn = 0;
 	static JSONArray hitArray = new JSONArray();
-	static boolean readyToSync = false;
 	static boolean sync = true;
-	static boolean startGame = false;
-	static boolean canStartGame = true;
-	static String gamestate = "";
-	static String json = "application/json";
 	static JSONArray games = new JSONArray();
 	static JSONArray tempGames = new JSONArray();
 	static boolean updateStatus = false;
 	static ArrayAdapter<Integer> gunFrequencies;
 	static int numFrequencies = 20;
 	static MediaPlayer mp;
+    static int isConnected = 0;
 	
-	static RequestParams buildPlayer() throws JSONException {
-		RequestParams buildPlayer = new RequestParams();
-		buildPlayer.put("username", Player.name);
-		buildPlayer.put("team_name", Player.team);
-		buildPlayer.put("gun_id", Player.gunId);
+	static JSONObject buildPlayer() {
+		JSONObject buildPlayer = new JSONObject();
+
+		try {
+			buildPlayer.put("username", Player.name);
+			buildPlayer.put("team_name", Player.team);
+			buildPlayer.put("gun_id", Player.gunId);
+		}
+		catch (JSONException e)
+		{
+
+		}
 		teams = new JSONArray();
 		if (Player.gameType == "TEAMS")
 		{
@@ -86,111 +87,136 @@ public class Player {
 	}
 	
 	static void startGame(final Context context) {
-		RequestParams game = new RequestParams();
+		JSONObject game = new JSONObject();
 
 		try {
 			game.put("mode", gameType);
 			game.put("player", buildPlayer());
 			game.put("teams", teams);
+            if (Player.score_limit == 0)
+            {
+                game.put("score_limit", JSONObject.NULL);
+            }
+            else
+            {
+                game.put("score_limit", score_limit);
+            }
+			if (Player.time_limit == 998)
+            {
+                game.put("time_limit", JSONObject.NULL);
+            }
+            else
+            {
+                game.put("time_limit", time_limit);
+            }
+
+			Log.i(TAG, "Starting Game Request: " + game.toString());
+			StringEntity gameEntity = new StringEntity(game.toString());
+
+			HttpConnect.post(context, "start", gameEntity, new JsonHttpResponseHandler() {
+                @Override
+                public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                    Log.w(TAG, "Start Game Response: " + response.toString());
+                    try {
+                        Player.gameId = response.getInt("game_id");
+                        Player.playerId = response.getInt("player_id");
+                        Player.delay = 0; //No delay for players
+                        if (Player.gameType.equals("TEAMS")) {
+                            Player.teamId = response.getInt("team_id");
+                        }
+                    } catch (Exception e)
+                    {
+                        //Something went wrong.
+                    }
+                    Intent intent = new Intent(context, Game.class);
+                    context.startActivity(intent);
+                    ((Activity)context).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+
+                }
+
+                @Override
+                public void onFailure(int status, Header[] headers, String response, Throwable e) {
+                    Log.w(TAG, "onFailure called for startgame");
+                    Log.w(TAG, "status: " + Integer.toString(status));
+                    Log.w(TAG, "Start Game failed: " + response);
+                }
+            });
+			Log.i("Start Game JSON: ", "Sent to post!");
 		}
-		catch(Exception e)
-		{
+		catch(Exception e) {
 
 		}
-		if (score_limit == 998)
-		{
-			game.put("score_limit", JSONObject.NULL);
-		}
-		else
-		{
-			game.put("score_limit", score_limit);
-		}
-		if (time_limit == 998)
-		{
-			game.put("time_limit", JSONObject.NULL);
-		}
-		else
-		{
-			game.put("time_limit", time_limit*60);
-		}
-
-		HttpConnect.post("start", game, new JsonHttpResponseHandler() {
-			@Override
-			public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-				Log.w(TAG, "Start Game Response: " + response.toString());
-			}
-		});
-		Log.i("Start Game JSON: ", "Sent to post!");
 	}
 	
 	static void joinGame(final Context context) {
-		RequestParams currentPlayer = new RequestParams();
+		JSONObject currentPlayer = new JSONObject();
 		Log.i("Join Game", "Join Game Called!");
 
-		if (Player.teamId == -1)
-		{
-			currentPlayer.put("team_id", JSONObject.NULL);
-		}
-		else
-		{
-			currentPlayer.put("team_id", Player.teamId);
-		}
-		currentPlayer.put("username", Player.name);
-		currentPlayer.put("gun_id", Player.gunId);
-
-		Log.i("Join Game JSON", currentPlayer.toString());
-
-		//TODO: Parameterize the gameId to the one selected
-		HttpConnect.post("join/" + Integer.toString(Player.gameId), currentPlayer, new JsonHttpResponseHandler() {
-            @Override
-			public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                try {
-                	Log.i("Join Game", "received response from join!");
-                	Log.i("Join Game", response.toString());
-                	Player.playerId = response.getInt("player_id");
-                	if (Player.gameType.equals("TEAMS"))
-                	{
-                		Player.teamId = response.getInt("team_id");
-                	}
-                	if (response.isNull("time_limit"))
-                	{
-                		Player.time_limit = 998;
-                		Player.delay = 0;
-                	}
-                	else
-                	{
-                		Player.time_limit = response.getInt("time_left") / 60;
-                		if (response.getInt("time_limit") < response.getInt("time_left"))
-            			{
-            				Player.delay = response.getInt("time_left") - response.getInt("time_limit");
-            			}
-            			else
-            			{
-            				Player.delay = 0;
-            			}
-                	}
-        			
-        			Intent intent = new Intent(context, Game.class);
-        			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-	        		context.startActivity(intent);
-				} catch (JSONException e) {
-					e.printStackTrace();
-				}
+        try {
+            if (Player.teamId == -1) {
+                currentPlayer.put("team_id", JSONObject.NULL);
+            } else {
+                currentPlayer.put("team_id", Player.teamId);
             }
-        });
+            currentPlayer.put("username", Player.name);
+            currentPlayer.put("gun_id", Player.gunId);
+
+            StringEntity playerEntity = new StringEntity(currentPlayer.toString());
+            Log.i("Join Game JSON", currentPlayer.toString());
+
+            //TODO: Parameterize the gameId to the one selected
+            HttpConnect.post(context, "join/" + Integer.toString(Player.gameId), playerEntity, new JsonHttpResponseHandler() {
+                @Override
+                public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                    try {
+                        Log.i("Join Game", "received response from join!");
+                        Log.i("Join Game", response.toString());
+                        Player.delay = 0; //No delay for players
+                        Player.playerId = response.getInt("player_id");
+                        if (Player.gameType.equals("TEAMS")) {
+                            Player.teamId = response.getInt("team_id");
+                        }
+                        if (response.isNull("time_limit")) {
+                            Player.time_limit = 998;
+                            Player.delay = 0;
+                        } else {
+                            Player.time_limit = response.getInt("time_left");
+                        }
+                    } catch (Exception e) {
+                        //problem parsing the response
+                    }
+
+                    Intent intent = new Intent(context, Game.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+                }
+                public void onFailure(int status, Header[] headers, String response, Throwable throwable)
+                {
+                    Log.i(TAG, "Join Failed");
+                    Log.i(TAG, response);
+                }
+            });
+        } catch (Exception e)
+        {
+
+        }
 	}
 	
-	static void sync() {
-		RequestParams syncPlayer = new RequestParams();
+	static void sync(Context context) {
+		JSONObject syncPlayer = new JSONObject();
 		Log.i("sync", "SYNCING!");
 
-		syncPlayer.put("player_id", Player.playerId);
-		syncPlayer.put("shots_fired", Player.shotsFired);
-		syncPlayer.put("hits_taken", Player.hitArray);
+        try {
+            syncPlayer.put("player_id", Player.playerId);
+            syncPlayer.put("shots_fired", Player.shotsFired);
+            syncPlayer.put("hits_taken", Player.hitArray);
+            StringEntity syncEntity = new StringEntity(syncPlayer.toString());
 
-		HttpConnect.post("sync/" + Integer.toString(Player.gameId), syncPlayer, new JsonHttpResponseHandler() {
+
+		HttpConnect.post(context, "sync/" + Integer.toString(Player.gameId), syncEntity, new JsonHttpResponseHandler() {
 			@Override
 			public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                isConnected = 1;
 				//TODO: Process the response back from sync
 				try {
 					Log.i("SYNCResponse", response.toString());
@@ -206,12 +232,22 @@ public class Player {
 					e.printStackTrace();
 				}
 			}
-
-			public void onSuccess(JSONArray array) {
-				Log.i("SYNC", "This was called!");
-				Log.i("SYNC", array.toString());
-			}
+            public void onFailure(int status, Header[] headers, String response, Throwable throwable)
+            {
+                if (status == 400)
+                {
+                    Player.isConnected = -1;
+                }
+                else {
+                    Player.isConnected = 0;
+                }
+            }
 		});
+        }
+        catch (Exception e)
+        {
+
+        }
 	}
 
 	static void shotFired()
@@ -228,6 +264,15 @@ public class Player {
 
 	static void receivedHit(Context ctx, String data)
 	{
+		if (health > 0)
+		{
+			health -= hitDamage;
+		}
+		if (health == 0)
+		{
+			status = "011";
+		}
+
 		//Vibrate when hit
 		Vibrator v = (Vibrator) ctx.getSystemService(Context.VIBRATOR_SERVICE);
 		v.vibrate(1000);
@@ -237,15 +282,6 @@ public class Player {
 		hitArray.put(hitFrequency);
 
 		Log.i(TAG, "Hit by frequency: " + hitFrequency);
-
-		if (health > 0)
-		{
-			health -= hitDamage;
-		}
-		if (health == 0)
-		{
-			status = "011";
-		}
 	}
 	
 	static void createProfile(final Context context) {
@@ -258,64 +294,64 @@ public class Player {
         final EditText input = new EditText(context);
         nameAlert.setView(input);
 
-		nameAlert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int whichButton) {
-				String entry = input.getEditableText().toString();
-				if (entry == null) {
-					Player.name = "Noname";
-				} else {
-					Player.name = entry;
-				}
+        nameAlert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                String entry = input.getEditableText().toString();
+                if (entry == null) {
+                    Player.name = "Noname";
+                } else {
+                    Player.name = entry;
+                }
 
-				Log.i(TAG, "Player name: " + name);
+                Log.i(TAG, "Player name: " + name);
 
-				ArrayList<Integer> frequencies = new ArrayList<Integer>();
-				for (int i = 0; i <= numFrequencies; i++) {
-					frequencies.add(i);
-				}
-				gunFrequencies = new ArrayAdapter<Integer>(context, android.R.layout.simple_spinner_item, frequencies);
+                ArrayList<Integer> frequencies = new ArrayList<Integer>();
+                for (int i = 0; i <= numFrequencies; i++) {
+                    frequencies.add(i);
+                }
+                gunFrequencies = new ArrayAdapter<Integer>(context, android.R.layout.simple_spinner_item, frequencies);
 
-				AlertDialog.Builder gunAlert = new AlertDialog.Builder(context);
-				gunAlert.setTitle("Gun Frequency"); //Set Alert dialog title here
-				gunAlert.setMessage("Select your weapon frequency"); //Message here
+                AlertDialog.Builder gunAlert = new AlertDialog.Builder(context);
+                gunAlert.setTitle("Gun Frequency"); //Set Alert dialog title here
+                gunAlert.setMessage("Select your weapon frequency"); //Message here
 
-				final Spinner gunSpinner = new Spinner(context);
-				gunSpinner.setAdapter(gunFrequencies);
-				gunAlert.setView(gunSpinner);
+                final Spinner gunSpinner = new Spinner(context);
+                gunSpinner.setAdapter(gunFrequencies);
+                gunAlert.setView(gunSpinner);
 
-				gunAlert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-							@SuppressLint("DefaultLocale")
-							public void onClick(DialogInterface dialog, int whichButton) {
-								//Try to pair with the selected bluetooth device
-								gunId = Integer.valueOf(gunSpinner.getSelectedItem().toString());
-								Log.i(TAG, "Gun picked: " + Integer.toString(gunId));
-								//Bluetooth.pair(context, gunSpinner.getSelectedItemPosition());
-								saveProfile(context);
-								dialog.dismiss();
-							}
-						}
-				);
+                gunAlert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @SuppressLint("DefaultLocale")
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                //Try to pair with the selected bluetooth device
+                                gunId = Integer.valueOf(gunSpinner.getSelectedItem().toString());
+                                Log.i(TAG, "Gun picked: " + Integer.toString(gunId));
+                                //Bluetooth.pair(context, gunSpinner.getSelectedItemPosition());
+                                saveProfile(context);
+                                dialog.dismiss();
+                            }
+                        }
+                );
 
-				gunAlert.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int whichButton) {
-						// Canceled.
-						basicDialog(context, "No Weapon", "No weapon formed against you shall prosper. Unfortunately, your weapon won't prosper either.");
-						dialog.cancel();
-					}
-				});
+                gunAlert.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        // Canceled.
+                        basicDialog(context, "No Weapon", "No weapon formed against you shall prosper. Unfortunately, your weapon won't prosper either.");
+                        dialog.cancel();
+                    }
+                });
 
-				AlertDialog alertDialog = gunAlert.create();
-				alertDialog.show();
+                AlertDialog alertDialog = gunAlert.create();
+                alertDialog.show();
 
-			}
-		}); //End of alert.setPositiveButton
+            }
+        }); //End of alert.setPositiveButton
         nameAlert.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int whichButton) {
-				// Canceled.
-				Player.name = "Noname";
-				dialog.cancel();
-			}
-		}); //End of alert.setNegativeButton
+            public void onClick(DialogInterface dialog, int whichButton) {
+                // Canceled.
+                dialog.cancel();
+                ((Activity) context).finish();
+            }
+        });//End of alert.setNegativeButton
         AlertDialog alertDialog = nameAlert.create();
         alertDialog.show();
 	}
@@ -327,10 +363,10 @@ public class Player {
         alert.setMessage(message); //Message here
         
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int whichButton) {
-				dialog.dismiss();
-			}
-		});
+            public void onClick(DialogInterface dialog, int whichButton) {
+                dialog.dismiss();
+            }
+        });
         AlertDialog alertDialog = alert.create();
         alertDialog.show();
 	}
@@ -342,18 +378,18 @@ public class Player {
 		alert.setMessage(message); //Message here
 
 		alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int whichButton) {
-				((Activity) context).finish();
-				((Activity) context).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-			}
-		});
+            public void onClick(DialogInterface dialog, int whichButton) {
+                ((Activity) context).finish();
+                ((Activity) context).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            }
+        });
 
 		alert.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int whichButton) {
-				// Canceled.
-				dialog.cancel();
-			}
-		});
+            public void onClick(DialogInterface dialog, int whichButton) {
+                // Canceled.
+                dialog.cancel();
+            }
+        });
 		AlertDialog alertDialog = alert.create();
 		alertDialog.show();
 	}
@@ -371,8 +407,7 @@ public class Player {
 			public void onClick(DialogInterface dialog, int whichButton) {
 				if (input.getText().toString().length() > 0) {
 					Intent intent;
-					HttpConnect.BASE_URL = input.getText().toString();
-					Log.i(TAG, "Setting base url to: " + input.getText().toString());
+					HttpConnect.BASE_URL = "http://" + input.getText().toString() + ":8000/";
 					if (parameter.equals("start")) {
 						intent = new Intent(context, StartGame.class);
 					} else {
@@ -401,13 +436,20 @@ public class Player {
 	static boolean loadProfile(Context context) {
 		SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
 		String name = preferences.getString("name", "");
+        Boolean profile = false;
 		if (name != "")
 		{
 			Player.name = name;
 			Player.gunId = preferences.getInt("gunid", -1);
-			return true;
+            profile = true;
 		}
-		return false;
+        String serverUrl = preferences.getString("server", "");
+        Log.i(TAG, "Server URL Loaded: " + serverUrl);
+        if (serverUrl != "")
+        {
+            HttpConnect.BASE_URL = serverUrl;
+        }
+		return profile;
 	}
 
 	static void saveProfile(Context context) {
@@ -419,4 +461,12 @@ public class Player {
 		editor.putInt("gunid", Player.gunId);
 		editor.apply();
 	}
+
+    static void saveServer(Context context) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("server", HttpConnect.BASE_URL);
+        Log.i(TAG, "Saving Server URL: " + HttpConnect.BASE_URL);
+        editor.apply();
+    }
 }

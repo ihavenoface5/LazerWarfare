@@ -63,8 +63,6 @@
 
     </RadioGroup>
 
-    
-    
      <GridView
         android:id="@+id/gamesGrid"
         android:layout_width="match_parent"
@@ -72,9 +70,20 @@
         android:layout_above="@+id/refreshButton"
         android:layout_below="@+id/radioGroup1"
         android:layout_centerHorizontal="true"
-        android:numColumns="1" >
+        android:numColumns="1"
+        android:gravity="center">
 
     </GridView>
+
+    <TextView
+        android:id="@+id/connectionStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status:"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="20dp"
+        />
 
    
 

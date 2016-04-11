@@ -381,7 +381,7 @@ public class Debug extends Activity implements BleManager.BleManagerListener{
         {
             Log.i(TAG, "Dialog cannot start - no devices found");
             builder.setTitle("Connect to BLE Device")
-                    .setMessage("No Bluetooth Low Energy Devices Detected. Press OK to scan again")
+                    .setMessage("No Bluetooth Low Energy Devices Detected. Make sure your Location Setting is set to High Accuracy. Press OK to scan again")
                     .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
                             startScan();

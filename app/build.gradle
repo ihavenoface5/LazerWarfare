@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.lazerwarfare"
-        minSdkVersion 18
+        minSdkVersion 19
         targetSdkVersion 23
     }
 
